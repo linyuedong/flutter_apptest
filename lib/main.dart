@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'Utils/LogUtils.dart';
 import 'widget/HomePageElement.dart';
-import 'widget/ImageElement .dart';
+import 'widget/HttpPage.dart';
+import 'widget/ImageElement.dart';
 import 'widget/ScaffoldWidget.dart';
 import 'widget/SplashElement.dart';
 import 'widget/pageviewindicator/MyPageViewIndicator.dart';
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
 class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
     return new Scaffold(
       appBar: new AppBar(
         title: new Text("Title"),
@@ -84,6 +86,12 @@ class MainPage extends StatelessWidget {
                 Navigator.push(context, new MaterialPageRoute(builder: (context) => new HomePage()));
               },
               child: new Text("HomePage")),
+          new FlatButton(
+              color: Colors.blue,
+              onPressed: () {
+                Navigator.push(context, new MaterialPageRoute(builder: (context) => new HtttPage()));
+              },
+              child: new Text("HttpTest")),
         ],
       ),
     );

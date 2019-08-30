@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/Utils/Toast.dart';
 
 class ScaffoldRoute extends StatefulWidget {
   @override
@@ -63,6 +64,7 @@ class _ScaffoldRouteState extends State<ScaffoldRoute> with SingleTickerProvider
     setState(() {
       _selectedIndex = index;
     });
+    Toast.show(context, "HAHA");
   }
   void _onAdd(){
   }
